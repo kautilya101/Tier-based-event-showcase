@@ -53,6 +53,7 @@ yarn dev
 ```
 
 ## Project Strucutre
+```bash
 app/
   components/
   actions/
@@ -63,3 +64,4 @@ supabase/
   seed.sql
 .env.local
 README.md
+```
