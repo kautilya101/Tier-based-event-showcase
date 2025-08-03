@@ -2,8 +2,11 @@
 # 🎉 Tier-Based Event Showcase
 
 A full-stack web app that displays tier-restricted events based on user subscription level. Built with **Next.js**, **Supabase**, **Clerk**, and **Tailwind CSS**.
-demo video: https://drive.google.com/file/d/1hEcooQIO5PbZf9B5pDV5hrkOWS9V64In/view?usp=sharing
 ---
+
+demo video: https://drive.google.com/file/d/1hEcooQIO5PbZf9B5pDV5hrkOWS9V64In/view?usp=sharing
+
+----
 
 ## 🚀 Features
 
