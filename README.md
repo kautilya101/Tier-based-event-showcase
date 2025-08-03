@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 🎉 Tier-Based Event Showcase
 
-First, run the development server:
+A full-stack web app that displays tier-restricted events based on user subscription level. Built with **Next.js**, **Supabase**, **Clerk**, and **Tailwind CSS**.
+
+---
+
+## 🚀 Features
+
+- 🔐 User authentication via **Clerk.dev**
+- 📦 Subscription tiers: `Free`, `Silver`, `Gold`, `Platinum`
+- 🎫 Events are locked/unlocked based on user tier
+- 💾 Data stored and queried using **Supabase**
+- 🎨 Fully responsive and modern UI built with **Tailwind CSS**
+
+---
+
+## 🧪 Test Credentials
+
+Use the following test accounts to explore different access levels:
+
+| Tier     | Email                          | Password     |
+|----------|--------------------------------|--------------|
+| Free     | bitor59761@nicext.com          | `#User#1234` |
+| Silver   | xiyof25515@nicext.com          | `#User#1234` |
+| Gold     | goxelen778@percyfx.com         | `#User#1234` |
+| Platinum | paheme5952@percyfx.com         | `#User#1234` |
+
+---
+
+## ⚙️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Auth**: [Clerk.dev](https://clerk.dev/)
+- **Database**: [Supabase](https://supabase.com/)
+- **UI**: [Tailwind CSS](https://tailwindcss.com/)
+
+---
+
+## 🛠️ Local Development Setup
+
+### 1. Clone the Repo
 
 ```bash
+git clone https://github.com/your-username/tier-event-showcase.git
+cd tier-event-showcase
+npm install
+# or
+yarn install
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Strucutre
+app/
+  components/
+  actions/
+  utils/
+  layout.tsx
+  page.tsx
+supabase/
+  seed.sql
+.env.local
+README.md
