@@ -1,15 +1,19 @@
 import { BaseHomeComponent } from "@/components/BaseHomeComponent";
 import { EventsListing } from "@/components/EventsListing";
 import { Navbar } from "@/components/Navbar";
-import { currentUser } from "@clerk/nextjs/server";
+import { auth, clerkClient } from "@clerk/nextjs/server";
 import { tierUpdateAction } from "./actions/tierUpdateAction";
 import { Tier } from "@/types/events.types";
 
 export default async function HomePage() {
-  const user = await currentUser()
+  const {userId} = await auth()
 
-  if(user && !user?.publicMetadata){
-    await tierUpdateAction(user.id, Tier.Free)
+  let user = null;
+  if (userId) {
+    user = await (await clerkClient()).users.getUser(userId)
+    if (user && !user.publicMetadata) {
+      await tierUpdateAction(userId, Tier.Free);
+    }
   }
 
   return (
